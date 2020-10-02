@@ -9,7 +9,7 @@ Simple script to draw gene architecture of one or several species/strains. Provi
 ```bash
 python synplot.py -g annotation1.gff[,annotation2.gff,...,annotationN.gff]
 ```
-Annotation files need to be in gff format. Extract the region of interest from your gff file(s) prior to usage. Genes names should be specified in the "Note" gff tag (e.g. Note=BtubA). Genes with the same name will be given the same color, genes annotated as "hypothetical_protein" or without functional annotation will be grey.
+Annotation files need to be in gff format. If more than one annotation is to be plotted, provide additional files separated by commas. Extract the region of interest from your gff file(s) prior to usage. Genes names should be specified in the "Note" gff tag (e.g. Note=BtubA). Genes with the same name will be given the same color, genes annotated as "hypothetical_protein" or without functional annotation will be grey.
 
 ## Highlights
 * Plot synteny directly from a gff file.
