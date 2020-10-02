@@ -14,3 +14,6 @@ Annotation files need to be in gff format. Extract the region of interest from y
 ## Highlights
 * Plot synteny directly from a gff file.
 * Output is written to svg format, for easy postprocessing.
+
+## Example
+![Example](/example.svg)
