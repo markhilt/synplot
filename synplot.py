@@ -1,14 +1,28 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+'''synplot.py
+
+Draw gene synteny from gff files and output an SVG file.
+
+Author: Markus Hiltunen
+E-mail: markus.hiltunen@ebc.uu.se
+
+Copyright (c) 2020, Markus Hiltunen
+Licensed under the MIT license. See LICENSE file.
+'''
+
 import drawSvg as draw
 from matplotlib.pyplot import cm
 import matplotlib.colors
 import argparse
 
+__version__ = "0.1"
+
 parser = argparse.ArgumentParser("Draw gene synteny from gff files.")
 parser.add_argument("-g","--gff", help="Comma-separated list of gff files to plot.", type = str)
 parser.add_argument("-P","--Pastel", help="Matplotlib pastel for coloring. [Pastel1]", type = str, default = "Pastel1")
+parser.add_argument("-v","--version", help="Print version and quit.", action = "version", version = "synplot v. ".format(__version__))
 args = parser.parse_args()
 
 def readGff(gff):
